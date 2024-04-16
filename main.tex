@@ -47,11 +47,18 @@
 \author[0000-0002-3950-5386]{Nuria Calvet}
 \affiliation{Department of Astronomy, University of Michigan, 1085 South University Avenue, Ann Arbor, MI 48109, USA}
 
+\author[0000-0000-0000-0000]{Gladis Magris}
+\affiliation{Centro de Investigaciones de Astronomía (CIDA), Mérida, 5101, Venezuela.}
+
 \author[0000-0001-8022-4378]{Marbely Micolta}
 \affiliation{Department of Astronomy, University of Michigan, 1085 South University Avenue, Ann Arbor, MI 48109, USA}
 
-%\author[]{Gladis Magris}
-%\affiliation{Centro de Investigaciones de Astronomía (CIDA), Mérida, 5101, Venezuela.}
+\author[0000-0003-4507-1710]{Thanawuth Thanathibodee}
+\affiliation{Institute for Astrophysical Research, Department of Astronomy,
+Boston University, 725 Commonwealth Avenue, Boston, MA 02215, USA}
+
+\author[0000-0002-5231-7240]{Thomas K. Waters}
+\affiliation{Department of Astronomy, University of Michigan, 1085 South University Avenue, Ann Arbor, MI 48109, USA}
 
 
 \shorttitle{algo}
@@ -67,11 +74,9 @@
 
 \section{Introduction}
 
-T-Tauri stars are low-mass stars with spectral types M-K (cite). They are formed from the collapse of gas clouds into a protostar. Studying the physical processes happening in these stars is crucial to understand the evolution of protoplanetary disks and planets (Manara 2022). One of the most important processes happening in T-Tauri stars is mass accretion. The current paradigm for this is magnetospheric accretion as described by \citep{hartmann2016}. In this paradigm mass is accreted from the disk in columns following the magnetic field lines of the host star. There is evidence supporting this model such as broad emission lines \citep{muzerolle2001} and UV excess due to the shock of the accreted material unto the star \citep{calvet_gullbring1998}. The study of the emission lines is important for identifying and measuring mass accretion rates (Hartmann 1994, Muzerolle 1998a, 1998b, 2001, white basri 2003, thanathibodee 2019).
+T-Tauri stars are low-mass stars with spectral types M-K (cite). They are formed from the collapse of gas clouds into a protostar. Studying the physical processes happening in these stars is crucial to understand the evolution of protoplanetary disks and planets. One of the most important processes happening in T-Tauri stars is mass accretion. The current paradigm for this is magnetospheric accretion as described by \citep{hartmann2016}. In this paradigm mass is accreted from the disk in columns following the magnetic field lines of the host star. There is evidence supporting this model such as broad emission lines \citep{muzerolle2001} and UV excess due to the shock of the accreted material unto the star \citep{calvet_gullbring1998}. The study of the emission lines is important for identifying and measuring mass accretion rates (Hartmann 1994, Muzerolle 1998a, 1998b, 2001, white basri 2003).
 
-When modelling emission from accretion columns it is necessary to fit optical and NUV emission because fitting only blue wavelengths have been shown to underestimate mass accretion rates (Fischer 2011). Multicolumn accretion shock models can explain NUV and optical emission simultaneously (Ingleby 2013).
-
-%why orion
+When modeling emission from accretion columns it is necessary to fit optical and NUV emission because fitting only blue wavelengths have been shown to underestimate mass accretion rates (Fischer 2011). Multicolumn accretion shock models can explain NUV and optical emission simultaneously (Ingleby 2013).
 
 In this work we will study T-Tauri stars from the Orion OB1b region, previously studied by Manara (2021a). This population was chosen because it is in a intermediate level of disk evolution and it is one of the better studied star-forming region. 
 
@@ -87,18 +92,71 @@ The objects studied in this paper are the TTS of the Orion OB1b association obse
 \subsection{X-Shooter spectra}
 
 The observations were made by the PENELLOPE program with the X-Shooter spectrograph in the Very Large Telescope (VLT, Vernet 2021). This instrument has medium-resolution broad-wavelength coverage and is flux-calibrated. Its coverage goes from approx $300-2500nm$  which is important because something. 
+
+\begin{table}[]
+\caption{Stellar parameters of the WTTS sample}
+\centering
+
+\begin{tabular}{ccccccc}
+\hline
+Nombre          & SpT  & $d$ {[}pc{]} & M {[}$M_*${]} & $T_{eff}$ {[}K{]} & Log $L/L_{\odot}$ & Ref  \\ \hline
+TWA9A          & K5   & 68           & 0.81          & 4350              & -0.61             & M13  \\
+RXJ1540.7-3756 & K6   & 150          & --            & 4205              & -0.41             & M17a \\
+SO879          & K7   & 360          & 1.07          & 4060              & -0.29             & M13  \\
+TWA25          & M0   & 54           & 0.84          & 3850              & -0.61             & M13  \\
+TWA14          & M0.5 & 96           & 0.73          & 3780              & -0.83             & M13  \\
+TWA13B         & M1   & 59           & 0.68          & 3705              & -0.70             & M13  \\
+TWA2A          & M2   & 47           & 0.55          & 3560              & -0.48             & M13  \\
+TWA9B          & M3   & 68           & 0.37          & 3415              & -1.17             & M13  \\
+TWA15A         & M3.5 & 111          & 0.30          & 3340              & -0.95             & M13  \\
+Sz94           & M4   & 200          & 0.28          & 3270              & -0.76             & M13  \\
+SO797          & M4.5 & 360          & 0.19          & 3200              & -1.26             & M13  \\
+Par-Lup3-2     & M5   & 200          & 0.18          & 3125              & -0.75             & M13  \\
+SO999          & M5.5 & 360          & 0.13          & 3060              & -1.28             & M13  \\ \hline
+\end{tabular}
+  % % }
+  %   \begin{tablenotes}
+  %           \small
+  %           % \item \textbf{Nota.} Las distancias reportadas por \citet{Manara2013} y \citet{Manara2017a} se obtuvieron para los objetos de TW Hya por \citet{Weinberger2013, Torres2008, Mamajek2005}, para $\sigma$ Ori de  \citet{Brown1994} y para Lupus III de \citet{Comeron2008}.
+  %   \end{tablenotes}
+
+    \label{SP WTTS}
+\end{table}
  
 \section{Model} \label{Models}
 
-Magnetospheric accretion model \citep{muzerolle2001}. Description of parameters space.
+Magnetospheric accretion model \citep{muzerolle2001}. Description of parameter space.
 
-Profile of emission lines were calculated from the accretion model proposed by \citet{muzerolle2001}. This uses the extended Sobolev method to simplify calculations. In this case, the radiation field is described by a local radiation and a non local term. More details of this model are described in the original paper. We used a model grid of 5 stars with stellar parameters in table tal. Each of the models of the grid are defined by a combination of accretion parameters: accretion rate ($\dot{M}$), maximum temperature ($T_{max}$), truncation radius ($R_i$), width of the accretion flows at the mid plane ($\Delta R$) and the inclination of the disk ($i$). The geometry of the accretion flows considered in this work is described in figure tal.  The ranges of the parameter space used for this work are described here. The conditions for the accretion rate and maximum temperature come from \citet{muzerolle2001}.  It is important to note that this model assumes dipolar geometry and axisymmetry of the magnetic field. 
+\begin{table}[]
+\centering
+\caption{Model stellar parameters}
+\begin{tabular}{ccccc}
+\hline
+SpT & Teff {[}K{]} & L {[}$L_{\odot}${]} & R {[}$R_{\odot}${]} & M {[}$M_{\odot}${]} \\ \hline
+K5  & 4350         & 0.745               & 1.519               & 0.872               \\
+K7  & 4060         & 0.515               & 1.451               & 0.726               \\
+M1  & 3705         & 0.345               & 1.426               & 0.614               \\
+M3  & 3415         & 0.215               & 1.327               & 0.465               \\
+M5  & 3125         & 0.117               & 1.171               & 0.306               \\ \hline
+\end{tabular}
+\label{table:parametros_modelos}
+\end{table}
 
-figure of geometry
+Profile of emission lines were calculated from the accretion model proposed by \citet{muzerolle2001}. This uses the extended Sobolev method to simplify calculations. In this case, the radiation field is described by a local radiation and a non-local term. More details of this model are described in the original paper. We used a model grid of 5 stars with stellar parameters in \ref{table:parametros_modelos}. Each of the models of the grid are defined by a combination of accretion parameters: accretion rate ($\dot{M}$), maximum temperature ($T_{max}$), truncation radius ($R_i$), width of the accretion flows at the mid plane ($\Delta R$) and the inclination of the disk ($i$). The geometry of the accretion flows considered in this work is described in \ref{fig:model_geometry}.  The ranges of the parameter space used for this work are described here. The conditions for the accretion rate and maximum temperature come from \citet{muzerolle2001}.  It is important to note that this model assumes dipolar geometry and axisymmetry of the magnetic field. 
 
+\begin{itemize}
+    \item $-10 \leq \msunyr log(\Mdot) \leq -7\msunyr$ in steps of $log(0.25) \msunyr$
+    \item $6500 K \leq$ \tmax $\leq 14000 K$ in steps of $500 K$.
+    \item $2 R_* \leq$ \ri $\leq 6 R_*$ in steps of $0.5 R_*$
+    \item \Dr $= 0.5 R_*$, $1 R_*$, $2 R_*$
+\end{itemize}
 
-
-table of model stellar parameters
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/geometry.png}
+    \caption{Model geometry}
+    \label{fig:model_geometry}
+\end{figure}
 
 \section{Multicolumn accretion}
 
@@ -123,9 +181,7 @@ As a test of this idea, we defined a region in the Balmer decrement diagram on w
 
 Extinction correction, heliocentric velocity, flux calculations, errors
 
-Fluxes of emission lines were calculated integrating the spectra after extinction and heliocentric velocity correction and after substracting the continua determined using this package. The errors were calculated following the method outlined by \citet{alcala2014}. This method consists of determining two more continua, one higher and lower than the middle one. In this case, we used 10\% difference between the central and the other continua. The total line flux was calculated from the average of the flux calculations using the three different continua and the error was the standard deviation $\sigma$. The emission lines analyzed in this work were \halpha, \hbeta and \hgamma.
-
-table with line fluxes
+Fluxes of emission lines were calculated integrating the spectra after extinction and heliocentric velocity correction and after subtracting the continua determined using this package. The errors were calculated following the method outlined by \citet{alcala2014}. This method consists of determining two more continua, one higher and lower than the middle one. In this case, we used 10\% difference between the central and the other continua. The total line flux was calculated from the average of the flux calculations using the three different continua and the error was the standard deviation $\sigma$. The emission lines analyzed in this work were \halpha, \hbeta and \hgamma.
 
 
 \subsection{MCMC}
@@ -140,7 +196,7 @@ After sampling with the MCMC, we took the final samples and took the ones with a
 
 \section{Results}
 
-Previous works using the same model grid, found a systematic underestimation of the flux of \hgamma. One of the goals of this work was to solve this issue using a combination of models. This tries to represent the complexity of real stellar magnetic field by combining high density and low density accretion flows covering different fractions of the total area covered on the stellar surface.
+Previous works using the same model grid, found a systematic underestimation of the flux of \hgamma. One of the goals of this work was to solve this issue using a combination of models. This tries to represent the complexity of real stellar magnetic field by combining high-density and low-density accretion flows covering different fractions of the total area covered on the stellar surface.
 
 Sampling using the MCMC methods we were able to find model combinations that could reproduce more accurately observed fluxes of the three Balmer lines studied, solving the issue of \hgamma.
 
@@ -150,15 +206,17 @@ Can we see trends in the parameters of the best fits?
 
 \section{Discussion} \label{Discussion}
 
-Magnetic fields geometry is complex and a one column accretion model cannot explain the observations. Using two columns we can explain the observed line fluxes. That is a rough approximation to the reality of complex magnetic fields.
+Magnetic fields geometry is complex and a one column accretion model cannot explain the observations. Using two columns we can explain the observed line fluxes. This is a rough approximation to the reality of complex magnetic fields.
 
-Variability of accretion.
+Density structure in \citet{zhaohuan2024}, \citet{espaillat2021}
 
-Magnetospheric flows absorb light from photosphere and chromosphere? Atom 2023
+Variability of accretion. "These stars show complicated spectral variability patterns which may be connected with the structure of the magnetospheric flows" \citep{romanova2003}
+
+Magnetospheric flows absorb light from photosphere and chromosphere? \citep{atom2023}
 
 \section*{Acknowledgements}
 
-Thanks Katya and Korbin
+Thanks Katya
 
 \software{Astropy, ...}
 
