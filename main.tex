@@ -47,7 +47,7 @@
 \author[0000-0002-3950-5386]{Nuria Calvet}
 \affiliation{Department of Astronomy, University of Michigan, 1085 South University Avenue, Ann Arbor, MI 48109, USA}
 
-\author[0000-0000-0000-0000]{Gladis Magris}
+\author[0000-0003-1166-5123]{Gladis Magris}
 \affiliation{Centro de Investigaciones de Astronomía (CIDA), Mérida, 5101, Venezuela.}
 
 \author[0000-0001-8022-4378]{Marbely Micolta}
@@ -64,9 +64,10 @@ Boston University, 725 Commonwealth Avenue, Boston, MA 02215, USA}
 \shorttitle{algo}
 \shortauthors{Patiño et al.}
 
+
 \begin{abstract}
 
- :(
+    <3
     
 \end{abstract}
 
@@ -77,6 +78,8 @@ Boston University, 725 Commonwealth Avenue, Boston, MA 02215, USA}
 T-Tauri stars are low-mass stars with spectral types M-K (cite). They are formed from the collapse of gas clouds into a protostar. Studying the physical processes happening in these stars is crucial to understand the evolution of protoplanetary disks and planets. One of the most important processes happening in T-Tauri stars is mass accretion. The current paradigm for this is magnetospheric accretion as described by \citep{hartmann2016}. In this paradigm mass is accreted from the disk in columns following the magnetic field lines of the host star. There is evidence supporting this model such as broad emission lines \citep{muzerolle2001} and UV excess due to the shock of the accreted material unto the star \citep{calvet_gullbring1998}. The study of the emission lines is important for identifying and measuring mass accretion rates (Hartmann 1994, Muzerolle 1998a, 1998b, 2001, white basri 2003).
 
 When modeling emission from accretion columns it is necessary to fit optical and NUV emission because fitting only blue wavelengths have been shown to underestimate mass accretion rates (Fischer 2011). Multicolumn accretion shock models can explain NUV and optical emission simultaneously (Ingleby 2013).
+
+The magnetospheric model has been unable to reproduce the observed \hgamma fluxes succesfully as shown by \citet{micolta2023}. They concluded that this appeared a systematic limitation of the models as they were, probably due to the axisymmetric geometry assumed. In this work, we approximate the complex magnetospheric geometry with multiple accretion flows of different densities to try and solve this problem.
 
 In this work we will study T-Tauri stars from the Orion OB1b region, previously studied by Manara (2021a). This population was chosen because it is in a intermediate level of disk evolution and it is one of the better studied star-forming region. 
 
@@ -93,7 +96,7 @@ The objects studied in this paper are the TTS of the Orion OB1b association obse
 
 The observations were made by the PENELLOPE program with the X-Shooter spectrograph in the Very Large Telescope (VLT, Vernet 2021). This instrument has medium-resolution broad-wavelength coverage and is flux-calibrated. Its coverage goes from approx $300-2500nm$  which is important because something. 
 
-\begin{table}[]
+\begin{table*}[]
 \caption{Stellar parameters of the WTTS sample}
 \centering
 
@@ -121,7 +124,7 @@ SO999          & M5.5 & 360          & 0.13          & 3060              & -1.28
   %   \end{tablenotes}
 
     \label{SP WTTS}
-\end{table}
+\end{table*}
  
 \section{Model} \label{Models}
 
@@ -171,7 +174,7 @@ Several studies indicate that stellar magnetic fields are far from dipolar and a
     \label{fig:balmer_decrement}
 \end{figure}
 
-The observed Balmer decrements of different regions do not correspond to the Balmer decrements obtained from the model grid, as can be seen in figure tal. Given that, we tested whether those could be reproduced by combining the lines fluxes of two different models from the grid weighed by a factor $f_i$ for each model. These factors represent the fraction of the emitting area covered by a given column or accretion flow. We fixed the factor for one of the models $f_1=10^{-3}$ and tried different values of factors for the other model, $f_2 = 10^{-1},10^{-2},10^{-4}$ .  Those factors were chosen based on the \textit{filling factors} of the accretion shock model. Though those factors are not equivalent, they represent a similar concepts. In the case of filling factors in the accretion shock model, they are interpreted as the percentage of the star surface that is covered by the emission from the shock.
+The observed Balmer decrements of different regions do not correspond to the Balmer decrements obtained from the model grid, as can be seen in figure tal. Given that, we tested whether those could be reproduced by combining the lines fluxes of two different models from the grid weighed by a factor $f_i$ for each model. These factors represent the fraction of the emitting area covered by a given column or accretion flow. We fixed the factor for one of the models $f_1=10^{-3}$ and tried different values of factors for the other model, $f_2 = 10^{-1},10^{-2},10^{-4}$ .  Those factors were chosen based on the \textit{filling factors} of the accretion shock model. Though those factors are not equivalent, they represent similar concepts. In the case of filling factors in the accretion shock model, they are interpreted as the percentage of the star surface that is covered by the emission from the shock.
 
 As a test of this idea, we defined a region in the Balmer decrement diagram on which most of the observation fell. Then, we tried different combinations of models and checked if, when weighed by $f_i$, the decrement of the combined models could reproduce the observed ones, meaning that it would fall on the defined region on the Balmer diagram. When looking at the parameter distribution of these two models separately, we can observe certain tendencies. We will refer to each of these models as 'columns' to make the discussion easier. The column covering the smaller area tends to have higher accretion rates, while the larger one tends to have lower accretion rates. That corresponds to a higher density and smaller column and a lower density and larger column.
 
@@ -187,8 +190,14 @@ Fluxes of emission lines were calculated integrating the spectra after extinctio
 \subsection{MCMC}
 
 why bayesian statistics and why MCMC. Characteristics of the MCMC used. 
-
 We used MCMC with 10000 steps and 50 walkers from the package \textit{emcee}
+
+We used Bayesian statistics to infer magnetospheric parameters of those model combinations that better reproduce the observed line fluxes. Our likelihood function is given by:
+
+\begin{equation}
+    log (L) \propto -\frac{1}{2} \sum_i \frac{(F_{i,obs}-F_{i,mod})^2}{\sigma_{i}^2}
+\end{equation}
+where $F_{i,obs}$ is the observed flux of the line $i$, $\sigma_i$ their respective errors, and $F_{i,mod}$ the line flux predicted by the models for that line. The subscript $i$ goes over the three Balmer lines under study: \halpha, \hbeta and \hgamma. We used the \textit{emcee} (cite) package to sample the posterior probability distribution function (PPDF) using the Monte Carlo Markov Chain (MCMC) algorithms. These were ran with 50 walkers and 10000 steps to expect convergence of the parameters. Given the complex of the distributions, the option for the \textit{move} algorithm was changed from the stardard of the package \textit{emcee}, the “stretch move” ensemble method from Goodman \& Weare (2010) to a more efficient  "DEMove" or Differential evolution proposal, implemented following Nelson et al. (2013) . For the parameters estimated, the 16\% and 84\% percentiles were chosen as credibility intervals.
 
 \subsection{Profile fitting}
 
