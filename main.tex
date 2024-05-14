@@ -61,6 +61,9 @@ Boston University, 725 Commonwealth Avenue, Boston, MA 02215, USA}
 \author[0000-0002-5231-7240]{Thomas K. Waters}
 \affiliation{Department of Astronomy, University of Michigan, 1085 South University Avenue, Ann Arbor, MI 48109, USA}
 
+\author[0000-0002-5296-6232]{María José Colmenares}
+\affiliation{Department of Astronomy, University of Michigan, 1085 South University Avenue, Ann Arbor, MI 48109, USA}
+
 
 \shorttitle{Understanding Balmer decrements in CTTS using multicolumn accretion}
 \shortauthors{Patiño et al.}
@@ -81,18 +84,18 @@ After the formation of a star from the collapse of a gas cloud, the conservation
 The most well-studied type of young stellar object are the T-Tauri stars which  are low-mass stars of late spectral types \citep{hartmann2016}. Studying the physical processes that occur in these stars, such as mass accretion, is crucial for understanding the evolution of protoplanetary disks and planets. The current paradigm for mass accretion in T-Tauri stars is magnetospheric accretion as described by \citet{hartmann2016}. In this paradigm mass is accreted from the disk in columns following the magnetic field lines of the host star. There is evidence supporting this model such as observed broad emission lines \citep{muzerolle2001} and UV excess due to the shock of the accreted material unto the star \citep{calvet_gullbring1998}. The study of the emission lines is important for identifying and measuring mass accretion rates \citep{hartmann1994, muzerolle1998a, muzerolle1998b, muzerolle2001}.
 
 
-Despite its success, the magnetospheric accretion model has fallen short in accurately replicating the observed Balmer decrements, as shown by \citet{micolta2023}. They concluded that this issue appeared to be a systematic limitation of the models as they were, likely because of the axisymmetric geometry assumed for the magnetic field. In this work, we approximate the complex magnetospheric geometry expected in T-Tauri stars with multiple accretion flows of different densities to better explain the observed emission lines. The concept of multicolumn accretion has been applied before to the accretion shock model and it has been shown to explain NUV and optical emission simultaneously (see \citet{ingleby2013, pittman2022}). There is also evidence of density gradients in the hot spots left on the stellar surface by the accretion columns \citep{espaillat2021} which could indicate an origin on flows of different densities. In this study, we will investigate the concept of multiple accretion columns with varying densities, concentrating on the emissions originating from the flows rather than the shock with the stellar surface.
+Despite its success, the magnetospheric accretion model has not been able to accurately replicate the observed Balmer decrements, as shown by \citet{micolta2023}. They concluded that this issue appeared to be a systematic limitation of the models as they were, likely because of the axisymmetric geometry assumed for the magnetic field. In this work, we approximate the complex magnetospheric geometry expected in T-Tauri stars with multiple accretion flows of different densities to better explain the observed emission lines. The concept of multicolumn accretion has been applied before to the accretion shock model, and it has been shown to explain NUV and optical emission simultaneously (see \citet{ingleby2013, pittman2022}). There is also evidence of density gradients in the hot spots left on the stellar surface by the accretion columns \citep{espaillat2021} that could indicate an origin in flows of different densities. In this study, we will investigate the concept of multiple accretion columns with varying densities, concentrating on the emissions originating from the flows rather than the shock with the stellar surface.
 
-In this work we will analyze the observations from T-Tauri stars of the Orion OB1b region, previously studied by \citet{manara2021}. This population was chosen because it is in a intermediate level of disk evolution and it is one of the better studied star-forming region.
+In this work, we will analyze the observations from  Classical T-Tauri Stars (CTTS) of the Orion OB1b region, previously studied by \citet{manara2021}. This is a appropiate population to study because it is in a intermediate level of disk evolution and it is one of the better studied star-forming region.
 
-This paper is structured as follows. In Section \ref{Sample and observations} we discuss the sample of T-Tauri stars and characteristics of the population, as well as the details and origin of the observational data used. In Section \ref{Models} we expand on the details of the magnetospheric accretion model used to fit the observations. In Section \ref{DataAnalysis} we describe the methodology used to analyse these data, corrections, and statistical methods to obtain our results. Lastly, we discuss our results and their implications in Section \ref{Discussion}.
+This paper is structured as follows. In Section \ref{Sample and observations} we discuss the sample of T-Tauri stars and characteristics of the population, as well as the details and origin of the observational data used. In Section \ref{Models} we expand on the details of the magnetospheric accretion model used to fit the observations. In Section \ref{DataAnalysis} we describe the analysis of the spectral data, corrections, and statistical methods used to obtain our results. Lastly, we discuss those results and their implications in Section \ref{Discussion}.
 
 
 
 \section{Observations} \label{Sample and observations}
 
 \subsection{Targets}
-The objects studied in this paper are the CTTS of the Orion OB1b association observed in the PENELLOPE Large Program by \citep{manara2021}. This is part of the ULLYSES program \citep{roman-duval2020}. This is one of the closest and most populous OB associations, and their subassociations have ages ranging from $1Myr$ to $10Myr$ \citep{blaauw1994}. The original sample of CTTS consisted of 8 stars with low extinctions ($A_v < 0.3$mag, \citet{briceno2019}). Some of these CTTS were excluded from the final analysis for different reasons. In the case of CVSO 109, it has a reported mass accretion rate of $log(\dot{M})= -6.76\msunyr$, which is outside of the accretion model grid used. On the other hand, CVSO 104 and CVSO 165 are binaries and were excluded from the analysis as the individual spectra of their members are not available \citep{manara2021a}. This results in a final sample of 5 CTTS from the OB1b association. For the analysis we will use the stellar parameters reported by \citet{manara2021}, which were determined using the methods described in \citep{manara2013a}. This consists on fitting the object's dereddened spectra with a hydrogen slab model and a photospheric emission template, in order to reproduce excess emission. Distances were determined using GAIA EDR3 \citep{gaia2016,gaia2021}. All of these parameters are reported in \ref{ctts_table}. 
+The objects studied in this paper are the CTTS of the Orion OB1b association observed in the PENELLOPE Large Program by \citep{manara2021}. This is part of the ULLYSES program \citep{roman-duval2020}. This is one of the closest and most populous OB associations, and their subassociations have ages ranging from $1Myr$ to $10Myr$ \citep{blaauw1994}. The original sample of CTTS consisted of 8 stars with low extinctions ($A_v < 0.3$mag, \citet{briceno2019}). Some of these CTTS were excluded from the final analysis for different reasons. In the case of CVSO 109, it has a reported mass accretion rate of $log(\dot{M})= -6.76\msunyr$, which is outside the accretion model grid used. On the other hand, CVSO 104 and CVSO 165 are binaries and were excluded from the analysis as the individual spectra of their members are not available \citep{manara2021a}. This results in a final sample of 5 CTTS from the OB1b association. For the analysis, we will use the stellar parameters reported by \citet{manara2021}, which were determined by fitting the object's dereddened spectra with a hydrogen slab model and a photospheric emission template, in order to reproduce the observed excess emission. This method is described in more detail in \citep{manara2013a}. Distances were determined using GAIA EDR3 \citep{gaia2016,gaia2021}. All of these parameters are reported in \ref{ctts_table}. 
 
 
 \begin{table*}[]
@@ -114,7 +117,7 @@ CVSO 176                        & M3.5 & 3260                                   
 
 \subsection{X-Shooter spectra}
 
-The observations were made by the PENELLOPE program with the X-Shooter spectrograph on the Very Large Telescope (VLT) \citep{vernet2011}. This instrument has medium-resolution broad-wavelength coverage and is flux-calibrated. This program was aimed at obtaining complementary data to the ULYSSES program \citep{roman-duval2020}.  Its coverage goes from $\approx 300-2500nm$ permitted getting information about the main stellar parameters and accretion process, among others important stuff. 
+The observations were made by the PENELLOPE program with the X-Shooter spectrograph on the Very Large Telescope (VLT) \citep{vernet2011}. This instrument has medium-resolution broad-wavelength coverage and is flux-calibrated. This program was aimed at obtaining complementary data to the ULYSSES program \citep{roman-duval2020}.  Its coverage goes from $\approx 300-2500nm$ permitted to obtain information about the main stellar parameters additionally to the ones describing the accretion process. 
 
 \begin{table*}[]
 \caption{Stellar parameters of the WTTS sample}
@@ -148,7 +151,8 @@ SO999          & M5.5 & 360          & 0.13          & 3060              & -1.28
  
 \section{Model} \label{Models}
 
-Magnetospheric accretion model \citep{muzerolle2001}. Description of parameter space.
+% Magnetospheric accretion model \citep{muzerolle2001}. Description of parameter space.
+% Atom2019b: "The model assumes that the geometry of themagnetospheric accretionflows is axisymmetric, following thedipole magneticfield, with the magnetic pole aligned to thestellar and Keplerian disk rotation poles, assumed to be thesame. Materialflows toward the star inside the boundarycontrolled by the magnetic dipole geometry and specified bythe innermost radius of the diskRiand the width at the base oftheflowW. The massflow is steady and set by the total massaccretion rateṀ. The temperature at each point in theflow is afree parameter, and each model is specified by the maximumtemperature in theflowTmax. The models use the extended Sobolev approximation to calculate mean intensities, which inturn are used to calculate radiative rates in the statisticalequilibrium for the level populations of a 16-level hydrogenatom(Muzerolle et al.2001). The lineflux is determined byusing a ray-by-ray method, in which the specific intensity andthe total optical depth of each ray are calculated at a giveninclinationi. Thefinal Hαline profile is calculated from thespatially integrated specific intensity. "
 
 \begin{table}[]
 \centering
@@ -165,7 +169,7 @@ M5  & 3125         & 0.117               & 1.171               & 0.306          
 \label{table:parametros_modelos}
 \end{table}
 
-Profile of emission lines were calculated from the accretion model proposed by \citet{muzerolle2001}. This uses the extended Sobolev method to simplify calculations. In this case, the radiation field is described by a local radiation and a non-local term. More details of this model are described in the original paper. We used a model grid of 5 stars with stellar parameters in \ref{table:parametros_modelos}. Each of the models of the grid are defined by a combination of accretion parameters: accretion rate ($\dot{M}$), maximum temperature ($T_{max}$), truncation radius ($R_i$), width of the accretion flows at the mid plane ($\Delta R$) and the inclination of the disk ($i$). The geometry of the accretion flows considered in this work is described in \ref{fig:model_geometry}.  The ranges of the parameter space used for this work are described here. The conditions for the accretion rate and maximum temperature come from \citet{muzerolle2001}.  It is important to note that this model assumes dipolar geometry and axisymmetry of the magnetic field. 
+We use the accretion model proposed by \citet{muzerolle2001} to characterize the emission of the accretion flows and then compare it with the observations. The expected emission profiles for different magnetospheric parameters were obtained following the method described in the original paper. This uses the extended Sobolev method to simplify calculations and the radiation field is described by a local radiation and a non-local term. The geometry of the accretion flows considered in this work is described in \ref{fig:model_geometry}. Based on this, we used a model grid of 5 stars with stellar parameters in \ref{table:parametros_modelos}. Each of the models of the grid are defined by a combination of magnetospheric accretion parameters: accretion rate ($\dot{M}$), maximum temperature ($T_{max}$), truncation radius ($R_i$), width of the accretion flows at the mid plane ($\Delta R$) and the inclination of the disk ($i$).  The ranges of the parameter space used for this work are described here. The conditions for the accretion rate and maximum temperature come from \citet{muzerolle2001}.  It is important to note that this model assumes dipolar geometry and axisymmetry of the magnetic field. 
 
 \begin{itemize}
     \item $-10 \leq \msunyr log(\Mdot) \leq -7\msunyr$ in steps of $log(0.25) \msunyr$
@@ -183,9 +187,11 @@ Profile of emission lines were calculated from the accretion model proposed by \
 
 \section{Multicolumn accretion}
 
+%atom2019b used two columns in an onion-like structure for a low accretor and could explain observed Halpha profiles
+
 Several studies indicate that stellar magnetic fields are far from dipolar and axisymmetric (cite). Simulations for more complex magnetic field geometry exist (see \citet{romanova2003}) but an analytical model does not exist (check atom 2023). Using the model grid as is has been insufficient to explain the observed Balmer fluxes in previous works \citep{micolta2023} as it underpredicts \hgamma emission. We try to replicate these fluxes and account more accurately for the complexity of the accretion flows by assuming two accretion columns of different densities. Each would have different emission areas, fractions of the total emission area of the flows. There is observational evidence of these density gradients as shown in \citet{zhaohuan2024}
 
- The concept of multiple column accretion has been applied before to the model of accretion shock by \citet{pittman2022} and others. They were able to explain observations of shock emission using columns of different energy densities. 
+ The concept of multiple column accretion has been applied before to the accretion shock model by \citet{pittman2022} and others. They were able to explain observations of shock emission using columns of different energy densities. 
 
 \begin{figure}
     \centering
@@ -194,10 +200,10 @@ Several studies indicate that stellar magnetic fields are far from dipolar and a
     \label{fig:balmer_decrement}
 \end{figure}
 
-The observed Balmer decrements of different regions do not correspond to the Balmer decrements obtained from the model grid, as can be seen in figure tal. Given that, we tested whether those could be reproduced by combining the lines fluxes of two different models from the grid weighed by a factor $f_i$ for each model. These factors represent the fraction of the emitting area covered by a given column or accretion flow. We fixed the factor for one of the models $f_1=10^{-3}$ and tried different values of factors for the other model, $f_2 = 10^{-1},10^{-2},10^{-4}$. These factors were chosen based on the \textit{filling factors} of the accretion shock model, which represent the area covered by the shock emission in units of total stellar area. It is worth noting that the filling factors of the accretion shock model and f factor of emitting area of the multicolumn accretion model considered in this work are not equivalent, though they stem from the same idea of the heterogeneity of the flows. 
+The observed Balmer decrements of different regions do not correspond to the Balmer decrements obtained from the model grid, as can be seen in figure tal. Given that, we tested whether those could be reproduced by combining the lines fluxes of two different models from the grid weighed by a factor $f_i$ for each model. These factors represent the fraction of the emitting area covered by a given column or accretion flow. We fixed the factor for one of the models $f_1=10^{-3}$ and tried different values of factors for the other model, $f_2 = 10^{-1},10^{-2},10^{-4}$. These factors were chosen based on the \textit{filling factors} of the accretion shock model, which represent the area covered by the shock emission in units of total stellar area. It should be noted that the filling factors of the accretion shock model and the f factor of the emitting area of the multicolumn accretion model considered in this work are not equivalent, though they stem from the same idea of the heterogeneity of flows. 
 % In the case of filling factors in the accretion shock model, they are interpreted as the percentage of the star surface that is covered by the emission from the shock.
 
-As a test of this idea, we defined a region in the Balmer decrement diagram on which most of the observation fell. Then, we tried different combinations of models and checked if, when weighed by $f_i$, the decrement of the combined models could reproduce the observed ones, meaning that it would fall on the defined region on the Balmer diagram. When looking at the parameter distribution of these two models separately, we can observe certain tendencies. We will refer to each of these models as 'columns' to make the discussion easier. The column covering the smaller area tends to have higher accretion rates, while the larger one tends to have lower accretion rates. That corresponds to a higher density and smaller column and a lower density and larger column.
+As a test of this idea, we defined a region in the Balmer decrement diagram on which most of the observation fell. Then, we tried different combinations of models and checked if, when weighed by $f_i$, the decrease of the combined models could reproduce the observed ones, which means that it would fall on the defined region of the Balmer diagram. When looking at the parameter distribution of these two models separately, we can observe certain tendencies. We will refer to each of these models as 'columns' to make the discussion easier. The column covering the smaller area tends to have higher accretion rates, while the larger one tends to have lower accretion rates. That corresponds to a higher density and smaller column and a lower density and larger column.
 
 \section{Data analysis}
 
@@ -205,6 +211,9 @@ As a test of this idea, we defined a region in the Balmer decrement diagram on w
 
 Fluxes of emission lines were calculated integrating the spectra after extinction and heliocentric velocity correction and after subtracting the continua determined using this package. The errors were calculated following the method outlined by \citet{alcala2014}. This method consists of determining two more continua, one higher and lower than the middle one. In this case, we used 10\% difference between the central and the other continua. The total line flux was calculated from the average of the flux calculations using the three different continua and the error was the standard deviation $\sigma$. The emission lines analyzed in this work were \halpha, \hbeta and \hgamma.
 
+\subsection{Chromospheric emission}
+
+We have to take into account chromospheric emission since TTS are magnetically active and can have significant UV emission \citep{ingleby2013}.
 
 \subsection{MCMC}
 
@@ -216,11 +225,11 @@ We used Bayesian statistics to infer magnetospheric parameters of those model co
 \begin{equation}
     log (L) \propto -\frac{1}{2} \sum_i \frac{(F_{i,obs}-F_{i,mod})^2}{\sigma_{i}^2}
 \end{equation}
-where $F_{i,obs}$ is the observed flux of the line $i$, $\sigma_i$ their respective errors, and $F_{i,mod}$ the line flux predicted by the models for that line. The subscript $i$ goes over the three Balmer lines under study: \halpha, \hbeta and \hgamma. We used the \textit{emcee} (cite) package to sample the posterior probability distribution function (PPDF) using the Monte Carlo Markov Chain (MCMC) algorithms. These were ran with 50 walkers and 10000 steps to expect convergence of the parameters. Given the complex of the distributions, the option for the \textit{move} algorithm was changed from the stardard of the package \textit{emcee}, the “stretch move” ensemble method from \citet{goodman-weare2010}, to a more efficient  "DEMove" or Differential evolution proposal, implemented following \citet{Nelson_2014}. For the parameters estimated, the 16\% and 84\% percentiles were chosen as credibility intervals.
+where $F_{i,obs}$ is the observed flux of the line $i$, $\sigma_i$ their respective errors, and $F_{i,mod}$ the line flux predicted by the models for that line. The subscript $i$ goes over the three Balmer lines under study: \halpha, \hbeta and \hgamma. We used the \textit{emcee} (cite) package to sample the posterior probability distribution function (PPDF) using the Monte Carlo Markov Chain (MCMC) algorithms. These were run with 50 walkers and 10000 steps to expect convergence of the parameters. Given the complex of the distributions, the option for the \textit{move} algorithm was changed from the stardard of the package \textit{emcee}, the “stretch move” ensemble method from \citet{goodman-weare2010}, to a more efficient  "DEMove" or Differential evolution proposal, implemented following \citet{Nelson_2014}. For the parameters estimated, the 16\% and 84\% percentiles were chosen as credibility intervals.
 
 \subsection{Profile fitting}
 
-After sampling with MCMC, we took the final samples and took the ones with a probability greater than \%. The profiles of these models were compared to the observations and best fits were found minimizing $\chi^2$ of the three Balmer lines simultaneously.
+After sampling with MCMC, we took the final samples and took the ones with a probability greater than \%. The profiles of these models were compared to the observations, and the best fits were found by minimizing $\chi^2$ of the three Balmer lines simultaneously. Use inclination to constrict profiles.
 
 \section{Results}
 
@@ -234,7 +243,11 @@ Can we see trends in the parameters of the best fits?
 
 \section{Discussion} \label{Discussion}
 
-Magnetic fields geometry is complex, and a one-column accretion model cannot explain the observations. Using two columns we can explain the observed line fluxes. This is a rough approximation to the reality of complex magnetic fields.
+Magnetic field geometry is complex, and a one-column accretion model cannot explain the observations. Using two columns we can explain the observed line fluxes. This is a rough approximation to the real complexity of stellar magnetic fields.
+
+Zhaohuan2024: 3D magnetohydrodynamic simulations have shown complex density structure in the accretion flows, such as filaments or an onion-like structure \citep{zhaohuan2024}. Filamentary structures formed by the interchange instability at Rt. These filaments can have densities more than 3 orders of magnitude higher than background density. Multiple accretion columns develop simultaneously and independently from one another. Despite this, mass accretion rate is steady.
+
+Atom2019b: multiple geometrically isolated accretion flows. Two-shell geometry could be reminiscent of a complex structure of the stellar magnetic field. Could be dipolar+multipolar fields (long 2007, 2012). Donati 2007, 2011 dipole and octupole components in V2129 Oph.
 
 Density structure in \citet{zhaohuan2024}, \citet{espaillat2021}
 
